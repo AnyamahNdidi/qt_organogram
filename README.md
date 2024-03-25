@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QuestionTime (QT) Frontend Application
+
+Welcome to the QuestionTime (QT) frontend application! QT provides a platform for registered users to set up multiple-choice questions for public interaction. This README provides an overview of the project setup, functionalities, and usage instructions.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the QT frontend application, follow the steps below:
+
+1. Clone the repository to your local machine:
 
 ```bash
+git clone https://github.com/AnyamahNdidi/qt_organogram
+
+2. Navigate to the project directory:
+
+cd qt
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Access the application in your browser at http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Token Generation
+Before you can interact with the QT frontend application, you need to generate a personal token by providing your email address. Follow the steps below to obtain your token:
 
-## Learn More
+Open the QT frontend application in your browser.
+You will be prompted to enter your email address.
+Provide your email address and submit the form.
+Upon successful submission, you will receive a personal token.
+Copy the token and keep it secure.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Usage
 
-## Deploy on Vercel
+Once you have obtained your personal token, you can use it to interact with the QT frontend application. The application allows you to perform the following actions:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Display existing questions and their options.
+Create new questions with multiple options.
+Add or remove options to existing questions.
+Edit the content of questions and options.
+Delete questions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# API Endpoints
+The frontend application interacts with the backend API available at https://qt.organogram.app/. Below are the key API endpoints used in the application:
+
+POST /token: Endpoint to obtain a personal token by providing the user's email address.
+GET /questions: Endpoint to retrieve all questions.
+POST /questions: Endpoint to add a new question.
+PUT /questions/{questionId}: Endpoint to edit an existing question.
+DELETE /questions/{questionId}: Endpoint to delete an existing question.
+Refer to the OpenAPI documentation for detailed API specifications.
