@@ -43,7 +43,7 @@ const TokenRequestForm = () => {
   };
 
   return (
-    <div className=" w- mx-auto">
+    <div className="  mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Request Token</h1>
 
       <form onSubmit={handleSubmit}>
